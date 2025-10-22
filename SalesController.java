@@ -16,7 +16,7 @@ public class SalesController {
 
     @PostMapping("/summary/weekly")
     public ResponseEntity<Void> triggerWeeklySummary() {
-        service.generateWeeklySummary();
+        service.generateWeeklySummary(); // dispara el evento asíncrono
         return ResponseEntity.status(HttpStatus.ACCEPTED).build(); // 202
     }
 }

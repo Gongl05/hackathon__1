@@ -1,0 +1,8 @@
+com\oreo\repository\SaleRepository.class
+com\oreo\dto\SaleResponse.class
+com\oreo\service\SaleService.class
+com\oreo\controller\SaleController.class
+com\oreo\dto\SaleRequest.class
+com\oreo\config\SaleDataLoader.class
+com\oreo\entity\Sale.class
+com\oreo\mapper\SaleMapper.class

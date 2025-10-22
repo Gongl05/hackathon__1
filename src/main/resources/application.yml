@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: insight-factory
+  datasource:
+    url: jdbc:h2:mem:insightdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate.format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:dev_dev_dev_dev_dev_dev_dev_dev_dev_dev_1234567890}
+    expiration-seconds: ${JWT_EXP_SECONDS:3600}
+
+app:
+  cors:
+    allowed-origins: "*"
+    allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+    allowed-headers: "*"
